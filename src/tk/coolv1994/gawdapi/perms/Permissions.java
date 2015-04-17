@@ -34,13 +34,7 @@ public class Permissions {
         return manager;
     }
 
-    public static void setManager(Class<?> permManager) {
-        try {
-            manager = (PermissionManager) permManager.newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+    public static void setManager(PermissionManager permManager) {
+        manager = permManager;
     }
 }
