@@ -24,10 +24,7 @@ public class Permissions {
     private static PermissionManager manager;
 
     public static boolean hasPermission(String player, String node) {
-        if (manager != null) {
-            return manager.hasPermission(player, node);
-        }
-        return false;
+        return manager != null && manager.hasPermission(player, node);
     }
 
     public static PermissionManager getManager() {
