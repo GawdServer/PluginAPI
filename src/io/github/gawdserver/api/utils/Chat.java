@@ -1,6 +1,6 @@
 /**
  * GawdAPI - The GawdServer Plugin Programming Interface
- * Copyright (C) 2015  CoolV1994 <http://coolv1994.tk>
+ * Copyright (C) 2015  GawdServer <http://gawdserver.github.io>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,13 +15,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package tk.coolv1994.gawdapi.plugin;
+package io.github.gawdserver.api.utils;
+
+
+import io.github.gawdserver.api.Gawd;
+import io.github.gawdserver.api.player.Console;
 
 /**
- * Created by Vinnie on 2/17/2015.
+ * Created by Vinnie on 2/4/2015.
  */
-public interface Plugin {
-    abstract void startup();
+public class Chat {
+    public static void sendMessage(String username, String message) {
+        if (username.equals(Console.CONSOLE))
+            System.out.println(message);
+        else
+            Gawd.sendCommand(String.format("tellraw %s {\"text\":\"%s\"}", username, message));
+    }
 
-    abstract void shutdown();
+    public static void broadcast(String message) {
+        Gawd.sendCommand(String.format("say %s", message));
+    }
 }

@@ -1,6 +1,6 @@
 /**
- * GawdServer - A new way to serve Minecraft
- * Copyright (C) 2015  CoolV1994 <http://coolv1994.tk>
+ * GawdAPI - The GawdServer Plugin Programming Interface
+ * Copyright (C) 2015  GawdServer <http://gawdserver.github.io>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,23 +15,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package tk.coolv1994.gawdapi.perms;
+package io.github.gawdserver.api;
+
+import io.github.gawdserver.api.launcher.Launcher;
 
 /**
- * Created by Vinnie on 2/2/2015.
+ * Created by Vinnie on 4/16/2015.
+ *
+ * Anything you need, just ask Gawd
+ * XD
  */
-public class Permissions {
-    private static PermissionManager manager;
+public class Gawd {
+    private static Launcher launcher;
 
-    public static boolean hasPermission(String player, String node) {
-        return manager != null && manager.hasPermission(player, node);
+    public static void sendCommand(String command) {
+        launcher.sendCommand(command);
     }
 
-    public static PermissionManager getManager() {
-        return manager;
+    public static Launcher getLauncher() {
+        return launcher;
     }
 
-    public static void setManager(PermissionManager permManager) {
-        manager = permManager;
+    public static void setLauncher(Launcher launch) {
+        launcher = launch;
     }
 }

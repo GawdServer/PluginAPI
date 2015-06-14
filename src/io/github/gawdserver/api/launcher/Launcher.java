@@ -1,6 +1,6 @@
 /**
  * GawdAPI - The GawdServer Plugin Programming Interface
- * Copyright (C) 2015  CoolV1994 <http://coolv1994.tk>
+ * Copyright (C) 2015  GawdServer <http://gawdserver.github.io>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,11 +15,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package tk.coolv1994.gawdapi.perms;
+package io.github.gawdserver.api.launcher;
 
 /**
- * Created by Vinnie on 2/17/2015.
+ * Created by Vinnie on 4/16/2015.
  */
-public interface PermissionManager {
-    abstract boolean hasPermission(String user, String node);
+public abstract interface Launcher {
+    public void sendCommand(String command);
 }
