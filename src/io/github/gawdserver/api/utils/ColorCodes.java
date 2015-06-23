@@ -17,9 +17,6 @@
  */
 package io.github.gawdserver.api.utils;
 
-/**
- * Created by Vinnie on 2/4/2015.
- */
 public class ColorCodes {
     public static final String selectionSymbol = "\u00A7";
     public static final String BLACK = selectionSymbol + "0";

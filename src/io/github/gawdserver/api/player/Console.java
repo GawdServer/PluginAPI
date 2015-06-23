@@ -17,9 +17,6 @@
  */
 package io.github.gawdserver.api.player;
 
-/**
- * Created by Vinnie on 2/4/2015.
- */
 public class Console {
     public static final String CONSOLE = "CONSOLE";
 }

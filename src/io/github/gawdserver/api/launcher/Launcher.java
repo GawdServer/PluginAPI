@@ -17,9 +17,6 @@
  */
 package io.github.gawdserver.api.launcher;
 
-/**
- * Created by Vinnie on 4/16/2015.
- */
-public abstract interface Launcher {
-    public void sendCommand(String command);
+public interface Launcher {
+    void sendCommand(String command);
 }

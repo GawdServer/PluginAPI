@@ -17,11 +17,8 @@
  */
 package io.github.gawdserver.api.events;
 
-/**
- * Created by Vinnie on 2/17/2015.
- */
 public interface PlayerAccessEvent {
-    abstract void playerConnect(String username);
+    void playerConnect(String username);
 
-    abstract void playerDisconnect(String username);
+    void playerDisconnect(String username);
 }

@@ -19,14 +19,13 @@ package io.github.gawdserver.api.plugin;
 
 import java.util.HashMap;
 
-/**
- * Created by Vinnie on 12/19/2014.
- */
 public class PluginInfo {
     private final String name;
     private final String version;
     private final String mainClass;
+    // Command - Command Class
     private final HashMap<String, String> commands;
+    // Event - Event Class
     private final HashMap<String, String> events;
 
     public PluginInfo(String name, String version, String mainClass, HashMap<String, String> commands, HashMap<String, String> events) {

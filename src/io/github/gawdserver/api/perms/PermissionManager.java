@@ -17,9 +17,6 @@
  */
 package io.github.gawdserver.api.perms;
 
-/**
- * Created by Vinnie on 2/17/2015.
- */
 public interface PermissionManager {
-    abstract boolean hasPermission(String user, String node);
+    boolean hasPermission(String user, String node);
 }

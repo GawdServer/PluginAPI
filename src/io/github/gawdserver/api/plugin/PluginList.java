@@ -15,28 +15,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.github.gawdserver.api;
+package io.github.gawdserver.api.plugin;
 
-import io.github.gawdserver.api.launcher.Launcher;
+import java.util.HashMap;
+import java.util.Set;
 
-/**
- * Created by Vinnie on 4/16/2015.
- *
- * Anything you need, just ask Gawd
- * XD
- */
-public class Gawd {
-    private static Launcher launcher;
+public class PluginList {
+    // Plugin Name - Version
+    private static final HashMap<String, String> plugins = new HashMap<>();
 
-    public static void sendCommand(String command) {
-        launcher.sendCommand(command);
+    public static void addPlugin(String name, String version) {
+        plugins.put(name, version);
     }
 
-    public static Launcher getLauncher() {
-        return launcher;
+    public static boolean hasPlugin(String name) {
+        return plugins.containsKey(name);
     }
 
-    public static void setLauncher(Launcher launch) {
-        launcher = launch;
+    public static String getVersion(String name) {
+        return plugins.get(name);
+    }
+
+    public static Set<String> getPlugins() {
+        return plugins.keySet();
     }
 }

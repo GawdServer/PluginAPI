@@ -17,11 +17,8 @@
  */
 package io.github.gawdserver.api.plugin;
 
-/**
- * Created by Vinnie on 2/17/2015.
- */
 public interface Plugin {
-    abstract void startup();
+    void startup();
 
-    abstract void shutdown();
+    void shutdown();
 }

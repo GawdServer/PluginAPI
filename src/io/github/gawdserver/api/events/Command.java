@@ -17,9 +17,8 @@
  */
 package io.github.gawdserver.api.events;
 
-/**
- * Created by Vinnie on 2/17/2015.
- */
 public interface Command {
-    abstract void onCommand(String player, String[] args);
+    void playerCommand(String player, String[] args);
+
+    void serverCommand(String[] args);
 }

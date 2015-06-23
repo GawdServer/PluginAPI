@@ -21,11 +21,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Vinnie on 2/2/2015.
- */
 public class PlayerList {
+    // Username - UUID
     private static final HashMap<String, String> playerIDs = new HashMap<>();
+    // Username
     private static final ArrayList<String> onlinePlayers = new ArrayList<>();
 
     public static void addPlayerID(String username, String uuid) {
