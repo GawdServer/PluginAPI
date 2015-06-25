@@ -28,7 +28,13 @@ public class PluginInfo {
     // Event - Event Class
     private final HashMap<String, String> events;
 
-    public PluginInfo(String name, String version, String mainClass, HashMap<String, String> commands, HashMap<String, String> events) {
+    public PluginInfo(
+            String name,
+            String version,
+            String mainClass,
+            HashMap<String, String> commands,
+            HashMap<String, String> events
+    ) {
         this.name = name;
         this.version = version;
         this.mainClass = mainClass;

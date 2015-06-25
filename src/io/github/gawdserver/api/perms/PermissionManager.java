@@ -18,5 +18,5 @@
 package io.github.gawdserver.api.perms;
 
 public interface PermissionManager {
-    boolean hasPermission(String user, String node);
+    boolean hasPermission(String player, String permission);
 }

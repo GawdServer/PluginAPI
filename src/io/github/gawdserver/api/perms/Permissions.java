@@ -20,8 +20,8 @@ package io.github.gawdserver.api.perms;
 public class Permissions {
     private static PermissionManager manager;
 
-    public static boolean hasPermission(String player, String node) {
-        return manager != null && manager.hasPermission(player, node);
+    public static boolean hasPermission(String player, String permission) {
+        return manager != null && manager.hasPermission(player, permission);
     }
 
     public static PermissionManager getManager() {
