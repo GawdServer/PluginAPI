@@ -18,34 +18,30 @@
 package io.github.gawdserver.api.utils;
 
 import io.github.gawdserver.api.Server;
-import io.github.gawdserver.api.player.Console;
 
 public class Chat {
     public static void sendMessage(String username, String message) {
-        if (Console.CONSOLE.equals(username))
-            System.out.println(message);
-        else
-            Server.sendCommand(String.format("tellraw %s {\"text\":\"%s\"}", username, message));
+        Server.sendCommand(String.format("tellraw %s {\"text\":\"%s\"}", username, message));
     }
 
     public static void broadcast(String message) {
-        Server.sendCommand(String.format("say %s", message));
+        Server.sendCommand(String.format("tellraw @p {\"text\":\"%s\"}", message));
     }
 
-    public static String toString(String[] a) {
-        if (a == null)
-            return "null";
+    public static String toString(String[] array) {
+        if (array == null)
+            return "";
 
-        int last = a.length - 1;
+        int last = array.length - 1;
         if (last == -1)
             return "";
 
         StringBuilder b = new StringBuilder();
         for (int i = 0; ; i++) {
-            b.append(a[i]);
+            b.append(array[i]);
             if (i == last)
                 return b.toString();
-            b.append(' ');
+            b.append(" ");
         }
     }
 }

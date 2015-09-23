@@ -17,8 +17,10 @@
  */
 package io.github.gawdserver.api.events;
 
+import io.github.gawdserver.api.player.Sender;
+
 public interface Command {
     void playerCommand(String player, String[] args);
 
-    void serverCommand(String[] args);
+    void serverCommand(Sender sender, String[] args);
 }

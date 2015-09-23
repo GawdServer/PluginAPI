@@ -17,6 +17,10 @@
  */
 package io.github.gawdserver.api.player;
 
-public class Console {
-    public static final String CONSOLE = "CONSOLE";
+public enum Sender {
+    COMMANDBLOCK,
+    CONSOLE,
+    PLAYER,
+    RCON,
+    SERVER
 }
