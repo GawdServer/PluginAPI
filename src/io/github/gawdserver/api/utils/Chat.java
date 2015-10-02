@@ -18,14 +18,42 @@
 package io.github.gawdserver.api.utils;
 
 import io.github.gawdserver.api.Server;
+import io.github.gawdserver.api.player.Sender;
+
+import java.util.Map;
 
 public class Chat {
     public static void sendMessage(String username, String message) {
+        if (Sender.CONSOLE.name().equals(username)) {
+            System.out.println(message);
+            return;
+        }
+        Server.sendCommand(String.format("tellraw %s {\"text\":\"%s\"}", username, message));
+    }
+
+    public static void sendMessage(String username, String message, Map<String, String> formatting) {
+        if (Sender.CONSOLE.name().equals(username)) {
+            System.out.println(message);
+            return;
+        }
+        StringBuilder builder = new StringBuilder();
+        builder.append("tellraw ");
+        builder.append(username);
+        builder.append(" {text:\"");
+        builder.append(message);
+        builder.append("\"");
+        for (Map.Entry<String, String> entry : formatting.entrySet()) {
+            builder.append(",");
+            builder.append(entry.getKey());
+            builder.append(":");
+            builder.append(entry.getValue());
+        }
+        builder.append("}");
         Server.sendCommand(String.format("tellraw %s {\"text\":\"%s\"}", username, message));
     }
 
     public static void broadcast(String message) {
-        Server.sendCommand(String.format("tellraw @p {\"text\":\"%s\"}", message));
+        Server.sendCommand(String.format("tellraw @a {\"text\":\"%s\"}", message));
     }
 
     public static String toString(String[] array) {
