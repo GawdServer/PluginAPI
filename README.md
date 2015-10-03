@@ -7,7 +7,7 @@ The Maven repository for the GawdServer Plugin API.
   <dependency>
     <groupId>io.github.gawdserver</groupId>
     <artifactId>api</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.4</version>
   </dependency>
 </dependencies>
 ```
