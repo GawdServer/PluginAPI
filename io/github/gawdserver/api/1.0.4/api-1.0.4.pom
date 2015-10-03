@@ -4,15 +4,15 @@
 
     <groupId>io.github.gawdserver</groupId>
     <artifactId>api</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>GawdAPI</name>
     <url>https://github.com/GawdServer/PluginAPI</url>
 
     <properties>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
         <github.global.server>github</github.global.server>
     </properties>
 
@@ -77,6 +77,8 @@
                     <repositoryName>PluginAPI</repositoryName>
                     <!-- github username  -->
                     <repositoryOwner>GawdServer</repositoryOwner>
+                    <!-- DELETE -->
+                    <oauth2Token>6709ef7600f0b454486675a40844df9937ecf703</oauth2Token>
                 </configuration>
                 <executions>
                     <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
